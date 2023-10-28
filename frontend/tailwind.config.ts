@@ -17,13 +17,17 @@ const config: Config = {
         "cs-bg": "#f6f6f6",
 
         "cs-white": "#ffffff",
+        "cs-white2": "#f6f6f6",
 
-        "cs-fade": "#f2f2f2",
-        "cs-fade1": "#e6e6e6",
-        "cs-fade3": "#cccccc",
+        "cs-black": "#3A3A3A",
 
-        "cs-red": "#ff0000",
-        "cs-accent": "#0000ff",
+        "cs-fade": "#434343",
+        "cs-fade1": "#606060",
+        "cs-fade2": "#8A8A8A",
+
+        "cs-red": "#D42525",
+        "cs-accent": "#1E81A0",
+        "cs-accent2": "#89C7EA",
       },
     },
   },
