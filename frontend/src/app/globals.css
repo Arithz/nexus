@@ -16,12 +16,20 @@
   }
 }
 
+.px-global {
+  @apply px-8;
+}
+
+.py-global {
+  @apply py-8;
+}
+
+.text-fade-global {
+  @apply text-cs-fade2 hover:text-cs-black transition;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb)))
     rgb(var(--background-start-rgb));
 }
