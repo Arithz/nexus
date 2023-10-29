@@ -4,8 +4,8 @@ export default function Navbar() {
   return (
     <>
       <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
-        <div className="max-w-screen flex items-center justify-between py-2">
-          <div className="w-[20%] bg-gray-300 px-global sm:hidden md:block">
+        <div className="max-w-screen flex items-center gap-6 justify-between py-2">
+          <div className="max-w-[15rem] w-full  sm:hidden md:block mx-global !mr-0">
             {/* logo */}
             <a href="https://flowbite.com/" className="flex items-center">
               <img src="images/logo.svg" alt="Logo" className="w-12 h-12" />
@@ -13,14 +13,14 @@ export default function Navbar() {
           </div>
 
           {/* right side*/}
-          <div className="flex md:order-2 w-[20%] md:justify-end bg-gray-300">
+          <div className="flex w-full max-w-[25rem] md:order-2 md:justify-end  mx-global !ml-0">
             {/* <button
               type="button"
               className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
               Get started
             </button> */}
-            <div className="w-full flex items-center gap-4 justify-end px-global">
+            <div className="w-full flex items-center gap-4 justify-end">
               <img src="images/message.svg" alt="messages" className="w-6 h-6" />
               <img src="images/notification.svg" alt="notifications" className="w-6 h-6" />
               <div className="flex items-center gap-2">
@@ -62,10 +62,7 @@ export default function Navbar() {
           </div>
 
           {/* search bar */}
-          <div
-            className="w-full max-w-[50rem]  items-center bg-gray-300 md:order-1"
-            id="navbar-sticky"
-          >
+          <div className="w-full max-w-[50rem] items-center md:order-1 mx-auto" id="navbar-sticky">
             <form>
               <label
                 htmlFor="default-search"

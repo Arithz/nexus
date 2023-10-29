@@ -17,7 +17,7 @@ function Extra() {
     return (
       <div className="rounded  border-cs-black bg-cs-white px-4 py-2">
         <h1 className="font-medium">Upgrade to Premium</h1>
-        <p>Experience the best and get all the benefits by suscribing</p>
+        <p className="text-sm">Experience the best and get all the benefits by suscribing</p>
         <button className="bg-cs-accent text-cs-white text-center rounded w-full py-1">
           Upgrade Now
         </button>
@@ -37,11 +37,11 @@ function Extra() {
   };
 
   return (
-    <div className="sticky top-24 h-fit space-y-4">
+    <>
       <Banner {...ComunityInfo} />
       <UpgradePremium />
       <Banner {...ItemOfTheWeekInfo} />
-    </div>
+    </>
   );
 }
 

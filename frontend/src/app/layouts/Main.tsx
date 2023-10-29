@@ -7,29 +7,33 @@ function Main() {
   return (
     <>
       <Navbar />
-      <div className="flex w-full h-full !pt-24 pb-8">
-        <div className="fixed w-full px -global ">
+      <div className="flex w-full gap-6 h-full !pt-24 pb-8">
+        <div className="fixed w-full">
           <Sidebar />
           {/* <Extra /> */}
         </div>
 
-        <div className="w-[20%] hidden md:block bg-gray-400"></div>
+        <div className="max-w-[15rem] w-full hidden md:block "></div>
 
-        {/* <Posts /> */}
-        <div className="flex z-10 md:w-full max-w-[50rem] mx-auto">
-          <div className=" bg-gray-300 w-full">
-            {[...Array(20)].map((_, i) => (
-              <div key={i} className="bg-white p-4 mb-4">
-                <h1 className="text-2xl font-bold">Post {i}</h1>
-                <p className="text-gray-500">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
-                </p>
-              </div>
-            ))}
+        <div className="flex justify-center gap-6 w-full">
+          {/* <Posts /> */}
+          <div className="flex z-10 md:w-full max-w-[50rem] ">
+            <div className="  w-full">
+              {[...Array(20)].map((_, i) => (
+                <div key={i} className="bg-white p-4 mb-4">
+                  <h1 className="text-2xl font-bold">Post {i}</h1>
+                  <p className="text-gray-500">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="hidden lg:block w-[20%] bg-gray-300">
-          <Extra />
+
+          {/* Banners */}
+          <div className="sticky top-24 h-fit space-y-4 w-full max-w-[25rem] hidden lg:block">
+            <Extra />
+          </div>
         </div>
       </div>
     </>
