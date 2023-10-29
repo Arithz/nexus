@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Banner from "./Banner";
 
@@ -7,18 +9,24 @@ function Extra() {
     name: "Comunity Name",
     description: "lorem ipsum at mein now rou yi helps geyouns kalknklknl",
     extra: "10k followers",
-    button: () => {
-      return <button>Follow Now</button>;
+    button: {
+      text: "Follow Now",
+      style:
+        "border-cs-fade3 hover:bg-cs-fade1 transition hover:text-cs-white border bg-cs-white text-cs-black rounded",
+      callback: () => {
+        alert("Followed");
+      },
     },
-    buttonstyle: "border-cs-black border bg-cs-white text-cs-black rounded",
   };
 
   const UpgradePremium = () => {
     return (
-      <div className="rounded  border-cs-black bg-cs-white px-4 py-2">
-        <h1 className="font-medium">Upgrade to Premium</h1>
-        <p className="text-sm">Experience the best and get all the benefits by suscribing</p>
-        <button className="bg-cs-accent text-cs-white text-center rounded w-full py-1">
+      <div className="rounded border border-cs-border-fade bg-cs-white px-4 py-3">
+        <h1 className="font-medium text-cs-black">Upgrade to Premium</h1>
+        <p className="text-sm mb-4 text-cs-fade1">
+          Experience the best and get all the benefits by suscribing
+        </p>
+        <button className="bg-cs-accent hover:bg-cs-accent-hover transition text-cs-white text-center rounded w-full py-2">
           Upgrade Now
         </button>
       </div>
@@ -30,16 +38,19 @@ function Extra() {
     image: "https://picsum.photos/200",
     name: "Item Name",
     description: "Item Description",
-    button: () => {
-      return <button>Buy Now</button>;
+    button: {
+      text: "Buy Now",
+      style: "bg-cs-red hover:bg-cs-red-hover text-cs-white transition rounded",
+      callback: () => {
+        alert("Item bought");
+      },
     },
-    buttonstyle: "bg-cs-red text-cs-white rounded",
   };
 
   return (
     <>
-      <Banner {...ComunityInfo} />
       <UpgradePremium />
+      <Banner {...ComunityInfo} />
       <Banner {...ItemOfTheWeekInfo} />
     </>
   );

@@ -12,8 +12,8 @@ function Main() {
           <Sidebar />
           {/* <Extra /> */}
         </div>
-
-        <div className="max-w-[15rem] w-full hidden md:block "></div>
+        {/* placeholder block */}
+        <div className="max-w-[10rem] w-full hidden md:block "></div>
 
         <div className="flex justify-center gap-6 w-full">
           {/* <Posts /> */}
@@ -31,7 +31,7 @@ function Main() {
           </div>
 
           {/* Banners */}
-          <div className="sticky top-24 h-fit space-y-4 w-full max-w-[25rem] hidden lg:block">
+          <div className="h-fit space-y-4 w-full max-w-[25rem] hidden lg:block">
             <Extra />
           </div>
         </div>
