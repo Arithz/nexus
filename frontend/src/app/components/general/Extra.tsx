@@ -6,7 +6,7 @@ import Banner from "./Banner";
 function Extra() {
   const ComunityInfo = {
     title: "Comunity Info",
-    name: "Comunity Name",
+    name: "comunity Name",
     description: "lorem ipsum at mein now rou yi helps geyouns kalknklknl",
     extra: "10k followers",
     button: {
@@ -23,10 +23,10 @@ function Extra() {
     return (
       <div className="rounded border border-cs-border-fade bg-cs-white px-4 py-3">
         <h1 className="font-medium text-cs-black">Upgrade to Premium</h1>
-        <p className="text-sm mb-4 text-cs-fade1">
+        <p className="text-xs mb-4 text-cs-fade1">
           Experience the best and get all the benefits by suscribing
         </p>
-        <button className="bg-cs-accent hover:bg-cs-accent-hover transition text-cs-white text-center rounded w-full py-2">
+        <button className="bg-cs-accent hover:bg-cs-accent-hover transition text-cs-white text-center rounded w-full py-1.5 text-sm font-medium">
           Upgrade Now
         </button>
       </div>
