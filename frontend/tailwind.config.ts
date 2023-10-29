@@ -34,6 +34,9 @@ const config: Config = {
         "cs-accent-hover": "#1B6A84",
         "cs-accent2": "#89C7EA",
       },
+      animation: {
+        slideUp: "slideUp 0.4s forwards",
+      },
     },
   },
   plugins: [],

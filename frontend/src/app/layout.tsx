@@ -25,7 +25,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
           crossOrigin="anonymous"
         />
-        <script src="https://kit.fontawesome.com/fce69d4a7c.js" crossOrigin="anonymous"></script>
+        <script
+          async
+          src="https://kit.fontawesome.com/fce69d4a7c.js"
+          crossOrigin="anonymous"
+        ></script>
       </head>
       <body className={inter.className}>{children}</body>
     </html>

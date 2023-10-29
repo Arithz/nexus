@@ -21,11 +21,17 @@ function Banner(props: BannerProps) {
         {/* image */}
         {props.image && (
           <div className="w-full overflow-hidden rounded bg-gray-300 aspect-video my-2">
-            <img src={props.image} alt={props.name} className="object-cover w-full object-center" />
+            <img
+              width="100%"
+              height="100%"
+              src={props.image}
+              alt={props.name}
+              className="object-cover w-full object-center"
+            />
           </div>
         )}
         {/* name */}
-        <h2 className="font-bold">{props.name}</h2>
+        <h2 className="font-bold text-cs-fade1">{props.name}</h2>
         {/* description */}
         <p className="text-cs-fade1 text-sm">{props.description}</p>
         {/* extra */}

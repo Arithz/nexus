@@ -32,17 +32,16 @@ const PostDetails = () => {
 const PostActions = () => {
   return (
     <div className="flex gap-4">
-      {/* add upvote,  comment and three dots button*/}
-      <button className="flex items-center gap-2 text-cs-fade2">
-        <i className="fa-solid fa-arrow-up text-cs-fade2"></i>
+      <button aria-label="1" className="flex items-center gap-2 text-cs-fade2">
+        <i className="fa-solid fa-arrow-up text-cs-fade2" aria-hidden="true" />
         <p>1</p>
       </button>
-      <button className="flex items-center gap-2 text-cs-fade2">
-        <i className="fa-solid fa-comment text-cs-fade2"></i>
+      <button aria-label="1" className="flex items-center gap-2 text-cs-fade2">
+        <i className="fa-solid fa-comment text-cs-fade2" aria-hidden="true" />
         <p>1</p>
       </button>
-      <button className="flex items-center gap-2 text-cs-fade2">
-        <i className="fa-solid fa-ellipsis-h text-cs-fade2"></i>
+      <button aria-label="options" className="flex items-center gap-2 text-cs-fade2">
+        <i className="fa-solid fa-ellipsis-h text-cs-fade2" aria-hidden="true" />
       </button>
     </div>
   );

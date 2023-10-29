@@ -70,7 +70,7 @@ const RightSide = () => {
         <div className="flex items-center gap-2">
           <span className="font-bold text-cs-white bg-cs-accent px-2.5 py-1 rounded-full">H</span>
           <p>harithzfathi</p>
-          <button className="">
+          <button className="" aria-label="down-arrow">
             <i className="fa-solid fa-chevron-down text-fade-global"></i>
           </button>
         </div>

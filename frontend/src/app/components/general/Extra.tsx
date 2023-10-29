@@ -6,7 +6,7 @@ import Banner from "./Banner";
 function Extra() {
   const ComunityInfo = {
     title: "Comunity Info",
-    name: "comunity Name",
+    name: "comunity name",
     description: "lorem ipsum at mein now rou yi helps geyouns kalknklknl",
     extra: "10k followers",
     button: {
@@ -35,7 +35,7 @@ function Extra() {
 
   const ItemOfTheWeekInfo = {
     title: "Item of the Week",
-    image: "https://picsum.photos/200",
+    image: "",
     name: "Item Name",
     description: "Item Description",
     button: {
