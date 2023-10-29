@@ -22,21 +22,27 @@ function Sidebar({ page, handleSetPage }: SidebarProps) {
   useEffect(updateElementStyles, [page]);
   useEffect(updateElementStyles, []); // Run once when component mounts
 
+  const pages = ["Home", "Marketplace", "Inventory"];
+
   return (
-    <div className="h-fit hidden md:block">
-      <h1 className="text-cs-black tracking-widest font-bold text-sm">MENU</h1>
-      <div className="flex flex-col">
-        <a href="#" id="home" onClick={() => handleSetPage("home")}>
-          Home
-        </a>
-        <a href="#" id="marketplace" onClick={() => handleSetPage("marketplace")}>
-          Marketplace
-        </a>
-        <a href="#" id="inventory" onClick={() => handleSetPage("inventory")}>
-          Inventory
-        </a>
+    <>
+      <h1 className="text-cs-black tracking-widest font-bold text-sm px-6 pb-4">MENU</h1>
+      <div className="flex flex-col gap-1">
+        {pages.map((thispage) => (
+          <button
+            key={thispage}
+            id={thispage}
+            onClick={() => handleSetPage(thispage)}
+            className={`${
+              thispage === page && "bg-cs-black !text-cs-white"
+            } flex items-center gap-4 py-2 px-6 text-sm font-medium text-cs-fade1 hover:text-cs-accent transition`}
+          >
+            <i className="fa-solid fa-home"></i>
+            <p>{thispage}</p>
+          </button>
+        ))}
       </div>
-    </div>
+    </>
   );
 }
 

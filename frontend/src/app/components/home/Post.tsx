@@ -17,8 +17,8 @@ const PostDetails = () => {
   return (
     <div className="py-4">
       <h1 className="text-cs-black font-bold text-lg">API Key in Github</h1>
-      <div className="flex flex-col gap-2 text-cs-fade1 mt-2">
-        <p className="text-cs-black">
+      <div className="flex flex-col gap-2 text-cs-fade2 text-sm mt-2">
+        <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptate, quibusdam,
           officia, doloremque voluptatum quia deserunt molestiae rem quos dolorum voluptatibus eius.
           Quisquam voluptate, quibusdam, officia, doloremque voluptatum quia deserunt molestiae rem

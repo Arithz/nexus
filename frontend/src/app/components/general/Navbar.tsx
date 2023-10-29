@@ -2,7 +2,7 @@ import React from "react";
 
 const LeftSide = () => {
   return (
-    <div className="max-w-[10rem] w-full  sm:hidden md:block mx-global !mr-0">
+    <div className="max-w-[15rem] w-full  sm:hidden md:block mx-global !mr-0">
       {/* logo */}
       <a href="https://flowbite.com/" className="flex items-center">
         <img src="images/logo.svg" alt="Logo" className="w-12 h-12" />
