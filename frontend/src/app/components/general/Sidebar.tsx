@@ -7,32 +7,32 @@ interface SidebarProps {
 }
 
 function Sidebar({ page, handleSetPage }: SidebarProps) {
-  useEffect(() => {
+  const updateElementStyles = () => {
     const element = document.getElementById(page);
     if (element) {
-      element.classList.add("text-cs-accent");
-      element.classList.add("font-bold");
+      element.classList.add("text-cs-accent", "font-bold");
     }
     return () => {
-      const element = document.getElementById(page);
       if (element) {
-        element.classList.remove("text-cs-accent");
-        element.classList.remove("font-bold");
+        element.classList.remove("text-cs-accent", "font-bold");
       }
     };
-  }, [page]);
+  };
+
+  useEffect(updateElementStyles, [page]);
+  useEffect(updateElementStyles, []); // Run once when component mounts
 
   return (
     <div className="h-fit hidden md:block">
       <h1 className="text-cs-black tracking-widest font-bold text-sm">MENU</h1>
-      <div>
-        <a href="#" id="home" className="block" onClick={() => handleSetPage("home")}>
+      <div className="flex flex-col">
+        <a href="#" id="home" onClick={() => handleSetPage("home")}>
           Home
         </a>
-        <a href="#" id="marketplace" className="block" onClick={() => handleSetPage("marketplace")}>
+        <a href="#" id="marketplace" onClick={() => handleSetPage("marketplace")}>
           Marketplace
         </a>
-        <a href="#" id="inventory" className="block" onClick={() => handleSetPage("inventory")}>
+        <a href="#" id="inventory" onClick={() => handleSetPage("inventory")}>
           Inventory
         </a>
       </div>
