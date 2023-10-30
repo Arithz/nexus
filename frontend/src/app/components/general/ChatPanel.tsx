@@ -1,5 +1,3 @@
-
-
 function ChatPanel(props: any) {
   function CancelCallback(callback: Function | null) {
     if (callback) callback();
@@ -34,55 +32,69 @@ function ChatPanel(props: any) {
         <input
           type="search"
           id="default-search"
-          className="block w-full pl-10 text-sm text-gray-900 ring-0 outline-none   focus:ring-blue-500 focus:border-blue-500  "
+          className="block w-full py-1 pl-10 text-sm text-gray-900 ring-0 outline-none  focus:ring-blue-500 focus:border-blue-500  "
           placeholder="Search Mockups, Logos..."
           required
         />
-        <div className="flex items-center absolute right-2.5 bottom-[0rem] opacity-30 transition hover:opacity-100" onClick = {closePopup}>
-          <i className = "fa-solid fa-xmark"></i>
+        <div
+          className="p-1 cursor-pointer flex items-center absolute right-0 bottom-[-0rem] opacity-30 transition hover:opacity-100"
+          onClick={closePopup}
+        >
+          <i className="fa-solid fa-xmark"></i>
         </div>
-    </div>
-    )
-  }
+      </div>
+    );
+  };
 
   return (
     <div
       className="fixed z-30 hidden w-full h-full min-h-screen min-w-screen bg-[#00000055] backdrop-blur-[1px]"
       id="popup"
     >
-      <div className="flex flex-col gap-4 items-center justify-center w-full h-full text-center "  id="popupcontent">
+      <div
+        className="flex flex-col gap-4 items-center justify-center w-full h-full text-center "
+        id="popupcontent"
+      >
         <div className="w-full max-w-2xl shadow-lg bg-cs-white rounded">
           <div className="px-4 py-2 md:py-3">
             {/* Content */}
-            <SearchBar/>
+            <SearchBar />
           </div>
         </div>
-        <div className = "w-full max-w-2xl shadow-lg rounded bg-cs-white py-2">
-          <p className = "text-center text-xs text-cs-fade3">Click user to open chat</p>
+        <div className="w-full max-w-2xl shadow-lg rounded bg-cs-white py-2">
+          <p className="text-center text-xs text-cs-fade3">Click user to open chat</p>
 
-          <div className = "h-fit max-h-[60vh] overflow-scroll">
-            <p className = "text-left text-cs-fade2 text-sm px-global">Recent Chats</p>
+          <div className="h-fit max-h-[60vh] overflow-y-scroll">
+            <p className="text-left text-cs-fade2 text-sm px-global">Recent Chats</p>
             {[...Array(3)].map((_, i: number) => (
-              <div key = {i} className = "flex items-center gap-2 py-2 px-global hover:bg-cs-border-fade transition">
-                <span className = "bg-cs-accent text-cs-white  text-sm w-5 leading-5 rounded-[50%] text-center">H</span>
+              <div
+                key={i}
+                className="flex items-center gap-2 py-2 px-global hover:bg-cs-border-fade transition"
+              >
+                <span className="bg-cs-accent text-cs-white  text-sm w-5 leading-5 rounded-[50%] text-center">
+                  H
+                </span>
                 <p>Username</p>
               </div>
             ))}
 
-            <br/>
-            <hr/>
-            <br/>
+            <div className="py-3">
+              <hr />
+            </div>
 
-            <p className = "text-left text-cs-fade2 text-sm px-global">All members</p>
+            <p className="text-left text-cs-fade2 text-sm px-global my-2">All members</p>
             {[...Array(10)].map((_, i: number) => (
-              <div key = {i} className = "flex items-center gap-2 py-2 px-global hover:bg-cs-border-fade transition">
-                <span className = "bg-cs-accent text-cs-white  text-sm w-5 leading-5 rounded-[50%] text-center">H</span>
+              <div
+                key={i}
+                className="flex items-center gap-2 py-2 px-global hover:bg-cs-border-fade transition"
+              >
+                <span className="bg-cs-accent text-cs-white  text-sm w-5 leading-5 rounded-[50%] text-center">
+                  H
+                </span>
                 <p>Username</p>
               </div>
             ))}
-
           </div>
-          
         </div>
       </div>
     </div>

@@ -19,7 +19,7 @@ function Main() {
   return (
     <>
       <Navbar />
-      <ChatPanel/>
+      <ChatPanel />
 
       <div className="flex w-full gap-4 h-full !pt-24 pb-8">
         <div className="fixed w-full max-w-[12rem] hidden md:block">
@@ -34,12 +34,11 @@ function Main() {
           <div className="z-10 md:w-full max-w-[50rem] ">
             {page === "Home" && <Home />}
             {page === "Marketplace" && <Marketplace />}
-            {page === "Inventory" && <Inventory/>}
+            {page === "Inventory" && <Inventory />}
           </div>
 
           {/* Banners */}
-          <div className="h-fit space-y-4 w-full max-w-[20rem] hidden lg:block">
-            <div className ="h-5"></div>
+          <div className="h-fit space-y-4 w-full max-w-[20rem] hidden lg:block pt-[2.4rem]">
             <Extra />
           </div>
         </div>

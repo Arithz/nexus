@@ -66,10 +66,23 @@ const RightSide = () => {
   return (
     <div className="flex w-full max-w-[20rem] md:order-2 md:justify-end  mx-global !ml-0">
       <div className="w-full flex items-center gap-4 justify-end">
-        <img src="images/message.svg" alt="messages" className="w-6 h-6" onClick = {openPopup}/>
-        <img src="images/notification.svg" alt="notifications" className="w-6 h-6" />
+        {/* message */}
+        <img
+          src="images/message.svg"
+          alt="messages"
+          className="w-6 h-6 hover:bg-cs-border-fade transition cursor-pointer"
+          onClick={openPopup}
+        />
+        {/* notifications */}
+        <img
+          src="images/notification.svg"
+          alt="notifications"
+          className="w-6 h-6 hover:bg-cs-border-fade transition cursor-pointer"
+        />
         <div className="flex items-center gap-2">
-          <span className="font-bold text-cs-white bg-cs-accent w-6 leading-6 tex-sm text-center rounded-[50%] ">H</span>
+          <span className="font-bold text-cs-white bg-cs-accent w-6 leading-6 tex-sm text-center rounded-[50%] ">
+            H
+          </span>
           <p>harithzfathi</p>
           <button className="" aria-label="down-arrow">
             <i className="fa-solid fa-chevron-down text-fade-global"></i>

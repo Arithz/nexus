@@ -26,7 +26,7 @@ function Sidebar({ page, handleSetPage }: SidebarProps) {
 
   return (
     <>
-      <h1 className="text-cs-black tracking-widest font-bold text-sm px-4 py-2.5 ">MENU</h1>
+      <h1 className="text-cs-black tracking-widest font-bold text-sm px-4 py-2.5">MENU</h1>
       <div className="flex flex-col gap-1">
         {pages.map((thispage) => (
           <button

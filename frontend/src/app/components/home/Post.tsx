@@ -49,7 +49,7 @@ const PostActions = () => {
 
 function Post() {
   return (
-    <div className="bg-white p-4 mb-4 border border-cs-border-fade rounded">
+    <div className="bg-white px-6 py-3 mb-4 border border-cs-border-fade rounded">
       <User />
       <PostDetails />
       <PostActions />
