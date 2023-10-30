@@ -6,7 +6,6 @@ import Sidebar from "@components/general/Sidebar";
 import Extra from "@components/general/Extra";
 import Post from "@components/home/Post";
 import ChatPanel from "@components/general/ChatPanel";
-import { openPopup } from "@utils/utils";
 
 function Main() {
   const [page, setPage] = useState("Home");
@@ -18,13 +17,11 @@ function Main() {
   return (
     <>
       <Navbar />
-      <ChatPanel />
+      <ChatPanel/>
 
       <div className="flex w-full gap-6 h-full !pt-24 pb-8">
         <div className="fixed w-full max-w-[15rem] hidden md:block">
           <Sidebar page={page} handleSetPage={handleSetPage} />
-
-          <button onClick={openPopup}>Open</button>
           {/* <Extra /> */}
         </div>
         {/* placeholder block */}

@@ -1,4 +1,5 @@
 import React from "react";
+import { openPopup } from "@utils/utils";
 
 const LeftSide = () => {
   return (
@@ -42,11 +43,11 @@ const SearchBar = () => {
           <input
             type="search"
             id="default-search"
-            className="block w-full p-3 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500  dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Search Mockups, Logos..."
             required
           />
-          <div className="flex items-center absolute right-2.5 bottom-[0.5rem] opacity-50">
+          <div className="flex items-center absolute right-2.5 bottom-[0.25rem] opacity-30">
             <kbd className="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
               Ctrl
             </kbd>
@@ -65,10 +66,10 @@ const RightSide = () => {
   return (
     <div className="flex w-full max-w-[22rem] md:order-2 md:justify-end  mx-global !ml-0">
       <div className="w-full flex items-center gap-4 justify-end">
-        <img src="images/message.svg" alt="messages" className="w-6 h-6" />
+        <img src="images/message.svg" alt="messages" className="w-6 h-6" onClick = {openPopup}/>
         <img src="images/notification.svg" alt="notifications" className="w-6 h-6" />
         <div className="flex items-center gap-2">
-          <span className="font-bold text-cs-white bg-cs-accent px-2.5 py-1 rounded-full">H</span>
+          <span className="font-bold text-cs-white bg-cs-accent w-6 leading-6 tex-sm text-center rounded-[50%] ">H</span>
           <p>harithzfathi</p>
           <button className="" aria-label="down-arrow">
             <i className="fa-solid fa-chevron-down text-fade-global"></i>
@@ -108,7 +109,7 @@ const RightSide = () => {
 export default function Navbar() {
   return (
     <>
-      <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+      <nav className="bg-cs-white fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
         <div className="max-w-screen flex items-center gap-6 justify-between py-2">
           <LeftSide />
           <RightSide />

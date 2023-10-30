@@ -35,7 +35,7 @@ const config: Config = {
         "cs-accent2": "#89C7EA",
       },
       animation: {
-        slideUp: "slideUp 0.4s forwards",
+        slideUp: "slideUp 0.25s ease forwards",
       },
     },
   },
