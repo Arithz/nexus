@@ -25,6 +25,8 @@ const ItemList = () => {
               <img
                 src="https://i.imgur.com/2ZJXJ8k.png"
                 alt="item"
+                width="100%"
+                height="100%"
                 className="w-full h-full object-cover object-center"
               />
             </div>
