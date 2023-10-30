@@ -3,7 +3,7 @@ import { openPopup } from "@utils/utils";
 
 const LeftSide = () => {
   return (
-    <div className="max-w-[15rem] w-full  sm:hidden md:block mx-global !mr-0">
+    <div className="max-w-[12rem] w-full  sm:hidden md:block mx-global !mr-0">
       {/* logo */}
       <a href="https://flowbite.com/" className="flex items-center">
         <img src="images/logo.svg" alt="Logo" className="w-12 h-12" />
@@ -64,7 +64,7 @@ const SearchBar = () => {
 
 const RightSide = () => {
   return (
-    <div className="flex w-full max-w-[22rem] md:order-2 md:justify-end  mx-global !ml-0">
+    <div className="flex w-full max-w-[20rem] md:order-2 md:justify-end  mx-global !ml-0">
       <div className="w-full flex items-center gap-4 justify-end">
         <img src="images/message.svg" alt="messages" className="w-6 h-6" onClick = {openPopup}/>
         <img src="images/notification.svg" alt="notifications" className="w-6 h-6" />

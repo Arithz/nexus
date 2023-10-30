@@ -51,7 +51,7 @@ function ChatPanel(props: any) {
       id="popup"
     >
       <div className="flex flex-col gap-4 items-center justify-center w-full h-full text-center "  id="popupcontent">
-        <div className="w-full max-w-2xl shadow bg-cs-white rounded">
+        <div className="w-full max-w-2xl shadow-lg bg-cs-white rounded">
           <div className="px-4 py-2 md:py-3">
             {/* Content */}
             <SearchBar/>
@@ -69,6 +69,7 @@ function ChatPanel(props: any) {
               </div>
             ))}
 
+            <br/>
             <hr/>
             <br/>
 

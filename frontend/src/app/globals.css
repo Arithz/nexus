@@ -17,7 +17,7 @@
 } */
 
 .px-global {
-  @apply px-8;
+  @apply px-4 md:px-8;
 }
 
 .py-global {
@@ -25,7 +25,7 @@
 }
 
 .mx-global {
-  @apply mx-8;
+  @apply mx-4 md:mx-8;
 }
 
 .my-global {

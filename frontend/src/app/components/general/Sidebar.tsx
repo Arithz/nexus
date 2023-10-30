@@ -26,7 +26,7 @@ function Sidebar({ page, handleSetPage }: SidebarProps) {
 
   return (
     <>
-      <h1 className="text-cs-black tracking-widest font-bold text-sm px-6 pb-4">MENU</h1>
+      <h1 className="text-cs-black tracking-widest font-bold text-sm px-4 py-2.5 ">MENU</h1>
       <div className="flex flex-col gap-1">
         {pages.map((thispage) => (
           <button
@@ -35,7 +35,7 @@ function Sidebar({ page, handleSetPage }: SidebarProps) {
             onClick={() => handleSetPage(thispage)}
             className={`${
               thispage === page && "bg-cs-black !text-cs-white"
-            } flex items-center gap-4 py-2 px-6 text-sm font-medium text-cs-fade1 hover:text-cs-accent transition`}
+            } flex items-center gap-4 py-1.5 px-4 text-sm font-medium text-cs-fade1 hover:text-cs-accent transition`}
           >
             <i className="fa-solid fa-home"></i>
             <p>{thispage}</p>

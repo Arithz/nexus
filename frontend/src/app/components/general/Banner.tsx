@@ -31,11 +31,11 @@ function Banner(props: BannerProps) {
           </div>
         )}
         {/* name */}
-        <h2 className="font-bold text-cs-fade1">{props.name}</h2>
+        <h2 className="font-bold text-cs-fade1 text-sm">{props.name}</h2>
         {/* description */}
-        <p className="text-cs-fade1 text-sm">{props.description}</p>
+        <p className="text-cs-fade1 text-xs">{props.description}</p>
         {/* extra */}
-        {props.extra && <p className="text-cs-fade1 text-sm !my-1">{props.extra}</p>}
+        {props.extra && <p className="text-cs-fade1 text-xs !my-1">{props.extra}</p>}
         {/* button */}
         <div className="w-full block text-center">
           <button

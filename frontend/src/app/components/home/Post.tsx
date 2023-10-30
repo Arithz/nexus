@@ -15,7 +15,7 @@ const User = () => {
 
 const PostDetails = () => {
   return (
-    <div className="py-4">
+    <div className="py-2">
       <h1 className="text-cs-black font-bold text-lg">API Key in Github</h1>
       <div className="flex flex-col gap-2 text-cs-fade2 text-sm mt-2">
         <p>
