@@ -1,11 +1,11 @@
-function ChatPanel(props: any) {
+function NewPostPanel(props: any) {
   function CancelCallback(callback: Function | null) {
     if (callback) callback();
     closePopup();
   }
 
   function closePopup() {
-    const popup = document.querySelector("#chatwindow");
+    const popup = document.querySelector("#newpostwindow");
     popup?.classList.add("hidden");
   }
 
@@ -49,11 +49,11 @@ function ChatPanel(props: any) {
   return (
     <div
       className="fixed z-30 hidden w-full h-full min-h-screen min-w-screen bg-[#00000055] backdrop-blur-[1px]"
-      id="chatwindow"
+      id="newpostwindow"
     >
       <div
         className="flex flex-col gap-4 items-center justify-center w-full h-full text-center "
-        id="chatwindowcontent"
+        id="newpostwindowcontent"
       >
         <div className="w-full max-w-2xl shadow-lg bg-cs-white rounded">
           <div className="px-4 py-2 md:py-3">
@@ -101,4 +101,4 @@ function ChatPanel(props: any) {
   );
 }
 
-export default ChatPanel;
+export default NewPostPanel;

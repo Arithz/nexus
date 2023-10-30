@@ -8,6 +8,7 @@ import ChatPanel from "@components/general/ChatPanel";
 import Home from "@components/home/Home";
 import Marketplace from "@components/marketplace/Marketplace";
 import Inventory from "@components/inventory/Inventory";
+import NewPostPanel from "@components/general/NewPostPanel";
 
 function Main() {
   const [page, setPage] = useState("Home");
@@ -20,6 +21,7 @@ function Main() {
     <>
       <Navbar />
       <ChatPanel />
+      <NewPostPanel />
 
       <div className="flex w-full gap-4 h-full !pt-24 pb-8">
         <div className="fixed w-full max-w-[12rem] hidden md:block">

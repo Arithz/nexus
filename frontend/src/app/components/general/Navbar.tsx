@@ -1,5 +1,5 @@
 import React from "react";
-import { openPopup } from "@utils/utils";
+import { openChatWindow } from "@utils/utils";
 
 const LeftSide = () => {
   return (
@@ -71,7 +71,7 @@ const RightSide = () => {
           src="images/message.svg"
           alt="messages"
           className="w-6 h-6 hover:bg-cs-border-fade transition cursor-pointer"
-          onClick={openPopup}
+          onClick={openChatWindow}
         />
         {/* notifications */}
         <img
