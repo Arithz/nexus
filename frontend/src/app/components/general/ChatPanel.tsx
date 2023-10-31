@@ -48,7 +48,7 @@ function ChatPanel(props: any) {
 
   return (
     <div
-      className="fixed z-30 hidden w-full h-full min-h-screen min-w-screen bg-[#00000018] backdrop-blur-[1px]"
+      className="fixed z-30 hidden w-full h-full min-h-screen min-w-screen bg-[#00000018] backdrop-blur-[1px] px-global"
       id="chatwindow"
     >
       <div

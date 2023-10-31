@@ -40,7 +40,7 @@ function Main() {
           </div>
 
           {/* Banners */}
-          <div className="h-fit space-y-4 w-full max-w-[20rem] hidden lg:block pt-[2.4rem]">
+          <div className="sticky overflow-y-auto top-12 h-[90vh] pb-5 space-y-4 w-full max-w-[20rem] hidden lg:block pt-[2.4rem]">
             <Extra />
           </div>
         </div>
