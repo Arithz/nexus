@@ -48,14 +48,14 @@ function ChatPanel(props: any) {
 
   return (
     <div
-      className="fixed z-30 hidden w-full h-full min-h-screen min-w-screen bg-[#00000055] backdrop-blur-[1px]"
+      className="fixed z-30 hidden w-full h-full min-h-screen min-w-screen bg-[#00000018] backdrop-blur-[1px]"
       id="chatwindow"
     >
       <div
         className="flex flex-col gap-4 items-center justify-center w-full h-full text-center "
         id="chatwindowcontent"
       >
-        <div className="w-full max-w-2xl shadow-lg bg-cs-white rounded">
+        <div className="w-full max-w-2xl shadow-lg bg-cs-white rounded-lg">
           <div className="px-4 py-2 md:py-3">
             {/* Content */}
             <SearchBar />

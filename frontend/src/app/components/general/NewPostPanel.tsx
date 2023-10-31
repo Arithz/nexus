@@ -48,52 +48,50 @@ function NewPostPanel(props: any) {
 
   return (
     <div
-      className="fixed z-30 hidden w-full h-full min-h-screen min-w-screen bg-[#00000055] backdrop-blur-[1px]"
+      className="fixed z-30 hidden w-full h-full min-h-screen min-w-screen bg-[#00000018]  backdrop-blur-[1px]"
       id="newpostwindow"
     >
       <div
         className="flex flex-col gap-4 items-center justify-center w-full h-full text-center "
         id="newpostwindowcontent"
       >
-        <div className="w-full max-w-2xl shadow-lg bg-cs-white rounded">
-          <div className="px-4 py-2 md:py-3">
+        <div className="w-full max-w-2xl shadow-lg bg-cs-white rounded-lg">
+          <div className="px-6 py-4">
             {/* Content */}
-            <SearchBar />
-          </div>
-        </div>
-        <div className="w-full max-w-2xl shadow-lg rounded bg-cs-white py-2">
-          <p className="text-center text-xs text-cs-fade3">Click user to open chat</p>
-
-          <div className="h-fit max-h-[60vh] overflow-y-scroll">
-            <p className="text-left text-cs-fade2 text-sm px-global">Recent Chats</p>
-            {[...Array(3)].map((_, i: number) => (
-              <div
-                key={i}
-                className="flex items-center gap-2 py-2 px-global hover:bg-cs-border-fade transition"
-              >
-                <span className="bg-cs-accent text-cs-white  text-sm w-5 leading-5 rounded-[50%] text-center">
-                  H
-                </span>
-                <p>Username</p>
+            <div className="w-full justify-between flex items-center">
+              <div className="flex gap-3 text-xs items-center">
+                <p className="text-cs-fade3">Harith Fathi {">"}</p>
+                <p className="px-2 py-1 rounded border border-cs-accent text-cs-accent">
+                  computerscience
+                </p>
               </div>
-            ))}
-
-            <div className="py-3">
-              <hr />
+              <button onClick={closePopup}>
+                <i className="fa-solid fa-xmark text-cs-fade3 hover:text-cs-fade1 transition cursor-pointer"></i>
+              </button>
             </div>
 
-            <p className="text-left text-cs-fade2 text-sm px-global my-2">All members</p>
-            {[...Array(10)].map((_, i: number) => (
-              <div
-                key={i}
-                className="flex items-center gap-2 py-2 px-global hover:bg-cs-border-fade transition"
-              >
-                <span className="bg-cs-accent text-cs-white  text-sm w-5 leading-5 rounded-[50%] text-center">
-                  H
-                </span>
-                <p>Username</p>
-              </div>
-            ))}
+            <div className="space-y-1 pt-1">
+              <input
+                type="text"
+                placeholder="Post Title"
+                className="w-full float-left placeholder:text-cs-fade2 font-medium outline-none"
+              ></input>
+              <textarea
+                className="w-full h-full border-none text-sm outline-none text-cs-fade1"
+                placeholder="Add a description..."
+                rows={3}
+              ></textarea>
+            </div>
+          </div>
+          <span className="block w-full h-[0.5px] bg-cs-border-fade"></span>
+          <div className="flex justify-between items-center px-6 py-4 md:py-3">
+            <i className="fa-solid fa-file text-cs-fade3 hover:text-cs-fade2 transition cursor-pointer"></i>
+            <button
+              type="button"
+              className="bg-cs-accent px-2 text-sm py-1 text-cs-white hover:bg-cs-accent-hover transition rounded"
+            >
+              Create post
+            </button>
           </div>
         </div>
       </div>
