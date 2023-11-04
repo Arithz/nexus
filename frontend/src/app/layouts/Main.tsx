@@ -23,17 +23,17 @@ function Main() {
       <ChatPanel />
       <NewPostPanel />
 
-      <div className="flex w-full gap-4 h-full !pt-24 pb-8">
-        <div className="fixed w-full max-w-[12rem] hidden md:block">
+      <div className="flex w-full justify-center gap-8 h-full !pt-24 pb-8">
+        <div className="w-full max-w-[12rem] hidden md:block">
           <Sidebar page={page} handleSetPage={handleSetPage} />
         </div>
 
         {/* placeholder block */}
-        <div className="max-w-[12rem] w-full hidden md:block"></div>
+        {/* <div className="max-w-[12rem] w-full hidden md:block"></div> */}
 
-        <div className="flex justify-center gap-4 w-full">
+        <div className="flex justify-center gap-8">
           {/* Main Content */}
-          <div className="z-10 md:w-full max-w-[50rem] ">
+          <div className="z-10 md:w-full max-w-4xl ">
             {page === "Home" && <Home />}
             {page === "Marketplace" && <Marketplace />}
             {page === "Inventory" && <Inventory />}

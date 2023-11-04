@@ -14,7 +14,7 @@ const LeftSide = () => {
 
 const SearchBar = () => {
   return (
-    <div className="w-full max-w-[50rem] items-center md:order-1 mx-auto" id="navbar-sticky">
+    <div className="md:w-full max-w-4xl items-center md:order-1" id="navbar-sticky">
       <form>
         <label
           htmlFor="default-search"
@@ -123,7 +123,7 @@ export default function Navbar() {
   return (
     <>
       <nav className="bg-cs-white fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
-        <div className="max-w-screen flex items-center gap-6 justify-between py-2">
+        <div className="flex items-center justify-center gap-8 py-2">
           <LeftSide />
           <RightSide />
           <SearchBar />
