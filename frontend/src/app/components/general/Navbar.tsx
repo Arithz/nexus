@@ -5,8 +5,8 @@ const LeftSide = () => {
   return (
     <div className="max-w-[12rem] w-full  sm:hidden md:block mx-global !mr-0">
       {/* logo */}
-      <a href="https://flowbite.com/" className="flex items-center">
-        <img src="images/logo.svg" alt="Logo" className="w-12 h-12" />
+      <a href="/" className="flex items-center">
+        <img src="/images/logo.svg" alt="Logo" className="w-12 h-12" />
       </a>
     </div>
   );
@@ -68,14 +68,14 @@ const RightSide = () => {
       <div className="w-full flex items-center gap-4 justify-end">
         {/* message */}
         <img
-          src="images/message.svg"
+          src="/images/message.svg"
           alt="messages"
           className="w-6 h-6 hover:bg-cs-border-fade transition cursor-pointer"
           onClick={openChatWindow}
         />
         {/* notifications */}
         <img
-          src="images/notification.svg"
+          src="/images/notification.svg"
           alt="notifications"
           className="w-6 h-6 hover:bg-cs-border-fade transition cursor-pointer"
         />
