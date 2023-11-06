@@ -9,9 +9,11 @@ import Home from "@components/home/Home";
 import Marketplace from "@components/marketplace/Marketplace";
 import Inventory from "@components/inventory/Inventory";
 import NewPostPanel from "@components/general/NewPostPanel";
+import Filter from "@components/general/Filter";
 
 function Main() {
-  const [page, setPage] = useState("");
+  const [page, setPage] = useState("Home");
+  const [pageFilter, setPageFilter] = useState("Inventory");
 
   function handleSetPage(page: string) {
     setPage(page);
@@ -34,6 +36,7 @@ function Main() {
       <div className="flex w-full justify-center gap-8 h-full !pt-24 pb-8">
         <div className="w-full max-w-[12rem] hidden md:block">
           <Sidebar page={page} handleSetPage={handleSetPage} />
+          <Filter pageFilter={pageFilter} handleSetPage={handleSetPage} />
         </div>
 
         <div className="flex justify-center gap-8">
@@ -45,6 +48,8 @@ function Main() {
             {page === "Home" && <Home />}
             {page === "Marketplace" && <Marketplace />}
             {page === "Inventory" && <Inventory />}
+            {pageFilter === "Marketplace" && <Marketplace />}
+            {pageFilter === "Inventory" && <Inventory />}
           </div>
 
           {/* Banners */}
