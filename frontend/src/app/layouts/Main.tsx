@@ -36,7 +36,7 @@ function Main() {
       <div className="flex w-full justify-center gap-8 h-full !pt-24 pb-8">
         <div className="w-full max-w-[12rem] hidden md:block">
           <Sidebar page={page} handleSetPage={handleSetPage} />
-          <Filter pageFilter={pageFilter} handleSetPage={handleSetPage} />
+          <Filter />
         </div>
 
         <div className="flex justify-center gap-8">
