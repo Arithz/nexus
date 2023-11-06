@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "@components/general/Navbar";
 import Sidebar from "@components/general/Sidebar";
 import Extra from "@components/general/Extra";
@@ -11,11 +11,19 @@ import Inventory from "@components/inventory/Inventory";
 import NewPostPanel from "@components/general/NewPostPanel";
 
 function Main() {
-  const [page, setPage] = useState("Home");
+  const [page, setPage] = useState("");
 
   function handleSetPage(page: string) {
     setPage(page);
   }
+
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const pageParam = urlParams.get("page");
+    const pageAvailable = ["Home", "Marketplace", "Inventory"];
+    if (pageParam && pageAvailable.includes(pageParam)) handleSetPage(pageParam);
+    else handleSetPage("Home");
+  }, []);
 
   return (
     <>
@@ -28,12 +36,12 @@ function Main() {
           <Sidebar page={page} handleSetPage={handleSetPage} />
         </div>
 
-        {/* placeholder block */}
-        {/* <div className="max-w-[12rem] w-full hidden md:block"></div> */}
-
         <div className="flex justify-center gap-8">
           {/* Main Content */}
           <div className="z-10 md:w-full max-w-4xl ">
+            {!page && (
+              <div className="w-full min-w-[56rem] shimmer h-full px-6 py-3 mb-4 border  rounded block  border-cs-border-fade"></div>
+            )}
             {page === "Home" && <Home />}
             {page === "Marketplace" && <Marketplace />}
             {page === "Inventory" && <Inventory />}
