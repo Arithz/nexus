@@ -38,7 +38,7 @@ const ItemList = () => {
               <p className="text-sm md:text-base font-bold text-cs-fade1">
                 The popular complete javascript bootcamp for beginner
               </p>
-              <p className="hidden md:block text-sm text-cs-fade2">
+              <p className="hidden md:block text-xs md:text-sm text-cs-fade2">
                 This courses is a good start for those who are new to JavaScript and want to learn
                 about this programming language
               </p>
