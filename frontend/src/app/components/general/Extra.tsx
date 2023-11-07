@@ -26,7 +26,7 @@ function Extra() {
         <p className="text-xs mb-4 text-cs-fade1">
           Experience the best and get all the benefits by suscribing
         </p>
-        <button className="bg-cs-accent hover:bg-cs-accent-hover transition text-cs-white text-center rounded w-full py-1.5 text-sm font-medium">
+        <button className="bg-cs-accent hover:bg-cs-accent-hover transition text-cs-white text-center rounded w-full py-1 text-sm font-medium">
           Upgrade Now
         </button>
       </div>
@@ -35,7 +35,7 @@ function Extra() {
 
   const ItemOfTheWeekInfo = {
     title: "Item of the Week",
-    image: "",
+    image: "https://i.imgur.com/2ZJXJ8k.png",
     name: "Item Name",
     description: "Item Description",
     button: {

@@ -49,11 +49,14 @@ const PostActions = () => {
 
 function Post() {
   return (
-    <div className="bg-white px-6 py-3 mb-4 border border-cs-border-fade rounded">
+    <a
+      href="/post/1"
+      className="w-full h-full block bg-white px-6 py-3 mb-4 border border-cs-border-fade rounded hover:shadow-lg hover:border  transition"
+    >
       <User />
       <PostDetails />
       <PostActions />
-    </div>
+    </a>
   );
 }
 

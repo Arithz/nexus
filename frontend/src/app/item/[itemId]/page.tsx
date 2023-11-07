@@ -21,7 +21,7 @@ const BuyPanel = () => {
   );
 };
 
-function Item() {
+function Item({ params }: any) {
   return (
     <>
       <Navbar />
@@ -34,10 +34,10 @@ function Item() {
         <div className="flex justify-center gap-8 !pt-24 pb-1">
           <a
             href="/?page=Marketplace"
-            className="flex items-center gap-3 cursor-pointer text-cs-fade2 hover:text-cs-fade1 transition "
+            className="flex text-xs items-center gap-3 cursor-pointer text-cs-white transition rounded-full px-3 py-1.5 border border-cs-border-fade bg-cs-fade2 hover:bg-cs-fade3 mb-4"
           >
             <i className="fa-solid fa-arrow-left text-sm"></i>
-            <p className="text-sm">Go Back To Marketplace</p>
+            <p>Go Back To Marketplace</p>
           </a>
         </div>
         {/* content */}

@@ -1,13 +1,26 @@
 import React from "react";
 
 const TopicBar = () => {
+  const topics = [
+    "Web Development",
+    "Mobile Development",
+    "Game Development",
+    "Machine Learning",
+    "Data Science",
+    "Cyber Security",
+    "UI/UX Design",
+    "Digital Marketing",
+    "Business",
+    "Finance",
+  ];
+
   return (
     <div className="px-6 ">
       <p className="text-sm font-medium text-cs-fade2">Popular Topics</p>
       <div className="grid grid-cols-5 gap-2 border-b border-cs-border-fade pb-6 pt-3">
-        {[...Array(10)].map((_, i: number) => (
-          <p key={i} className="border border-cs-fade3 py-1 px-3 text-center">
-            Item {i}
+        {topics.map((_, i: number) => (
+          <p key={i} className="text-xs border border-cs-fade3 py-1 px-3 text-center">
+            {topics[i]}
           </p>
         ))}
       </div>
@@ -61,7 +74,7 @@ function Marketplace() {
   return (
     <>
       <h1 className="text-cs-black tracking-widest font-bold text-sm px-4 py-2.5">MARKETPLACE</h1>
-      <div className="h-full w-full py-3 bg-cs-white border border-cs-border-fade rounded">
+      <div className="h-fit w-full pt-3 mb-5 bg-cs-white border border-cs-border-fade rounded">
         <TopicBar />
         <ItemList />
       </div>

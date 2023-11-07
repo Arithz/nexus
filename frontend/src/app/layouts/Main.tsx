@@ -42,7 +42,7 @@ function Main() {
           {/* Main Content */}
           <div className="z-10 md:w-full max-w-4xl ">
             {!page && (
-              <div className="w-full min-w-[30rem] max-w-[56rem] shimmer h-full px-6 py-3 mb-4 border mt-[2.4rem]  rounded block  border-cs-border-fade"></div>
+              <div className="w-full min-w-[56rem] max-w-[56rem] shimmer h-full px-6 py-3 mb-4 border mt-[2.4rem]  rounded block  border-cs-border-fade"></div>
             )}
             {page === "Home" && <Home />}
             {page === "Marketplace" && <Marketplace />}
@@ -50,7 +50,7 @@ function Main() {
           </div>
 
           {/* Banners */}
-          <div className="sticky overflow-y-auto top-12 h-[90vh] pb-5 space-y-4 w-full md:max-w-[16rem] xl:max-w-[20rem] hidden lg:block pt-[2.4rem]">
+          <div className="sticky overflow-y-auto top-12 h-[90vh] pb-5 space-y-3 w-full md:max-w-[16rem] xl:max-w-[20rem] hidden lg:block pt-[2.4rem]">
             <Extra />
           </div>
         </div>

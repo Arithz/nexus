@@ -122,7 +122,7 @@ const RightSide = () => {
 export default function Navbar() {
   return (
     <>
-      <nav className="bg-cs-white fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+      <nav className="bg-cs-white fixed w-full z-20 top-0 left-0 border-b border-gray-300">
         <div className="flex items-center justify-center gap-5 xl:gap-8 py-2">
           <LeftSide />
           <RightSide />

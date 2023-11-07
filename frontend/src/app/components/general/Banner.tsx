@@ -16,8 +16,8 @@ interface BannerProps {
 function Banner(props: BannerProps) {
   return (
     <div className="w-full bg-cs-white rounded border border-cs-border-fade">
-      <h1 className="rounded-t bg-cs-accent text-cs-white px-4 py-2">✨ {props.title}</h1>
-      <div className="px-4 py-3">
+      <h1 className="rounded-t bg-cs-accent text-cs-white px-4 py-1">✨ {props.title}</h1>
+      <div className="px-4 py-2">
         {/* image */}
         {props.image && (
           <div className="w-full overflow-hidden rounded bg-gray-300 aspect-video my-2">
@@ -26,7 +26,7 @@ function Banner(props: BannerProps) {
               height="100%"
               src={props.image}
               alt={props.name}
-              className="object-cover w-full object-center"
+              className="object-cover w-full object-center h-full"
             />
           </div>
         )}
@@ -39,7 +39,7 @@ function Banner(props: BannerProps) {
         {/* button */}
         <div className="w-full block text-center">
           <button
-            className={props.button.style + " w-full py-1.5 text-sm font-medium !my-2"}
+            className={props.button.style + " w-full py-1 text-sm font-medium !my-1"}
             onClick={() => props.button.callback()}
           >
             {props.button.text}
