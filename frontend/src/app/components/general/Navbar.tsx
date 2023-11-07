@@ -64,7 +64,7 @@ const SearchBar = () => {
 
 const RightSide = () => {
   return (
-    <div className="flex w-full max-w-[20rem] md:order-2 md:justify-end  mx-global !ml-0">
+    <div className="flex w-full md:max-w-[16rem] xl:max-w-[20rem] md:order-2 md:justify-end  mx-global !ml-0">
       <div className="w-full flex items-center gap-4 justify-end">
         {/* message */}
         <img
@@ -123,7 +123,7 @@ export default function Navbar() {
   return (
     <>
       <nav className="bg-cs-white fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
-        <div className="flex items-center justify-center gap-8 py-2">
+        <div className="flex items-center justify-center gap-5 xl:gap-8 py-2">
           <LeftSide />
           <RightSide />
           <SearchBar />

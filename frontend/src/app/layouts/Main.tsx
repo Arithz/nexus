@@ -12,7 +12,7 @@ import NewPostPanel from "@components/general/NewPostPanel";
 import Filter from "@components/general/Filter";
 
 function Main() {
-  const [page, setPage] = useState("Home");
+  const [page, setPage] = useState("");
   const [pageFilter, setPageFilter] = useState("Inventory");
 
   function handleSetPage(page: string) {
@@ -33,27 +33,24 @@ function Main() {
       <ChatPanel />
       <NewPostPanel />
 
-      <div className="flex w-full justify-center gap-8 h-full !pt-24 pb-8">
+      <div className="flex w-full justify-center gap-5 xl:gap-8 h-full !pt-24 pb-8">
         <div className="w-full max-w-[12rem] hidden md:block">
           <Sidebar page={page} handleSetPage={handleSetPage} />
-          <Filter />
         </div>
 
-        <div className="flex justify-center gap-8">
+        <div className="flex justify-center gap-5 xl:gap-8">
           {/* Main Content */}
           <div className="z-10 md:w-full max-w-4xl ">
             {!page && (
-              <div className="w-full min-w-[56rem] shimmer h-full px-6 py-3 mb-4 border  rounded block  border-cs-border-fade"></div>
+              <div className="w-full min-w-[30rem] max-w-[56rem] shimmer h-full px-6 py-3 mb-4 border mt-[2.4rem]  rounded block  border-cs-border-fade"></div>
             )}
             {page === "Home" && <Home />}
             {page === "Marketplace" && <Marketplace />}
             {page === "Inventory" && <Inventory />}
-            {/* {pageFilter === "Marketplace" && <Marketplace />}
-            {pageFilter === "Inventory" && <Inventory />} */}
           </div>
 
           {/* Banners */}
-          <div className="sticky overflow-y-auto top-12 h-[90vh] pb-5 space-y-4 w-full max-w-[20rem] hidden lg:block pt-[2.4rem]">
+          <div className="sticky overflow-y-auto top-12 h-[90vh] pb-5 space-y-4 w-full md:max-w-[16rem] xl:max-w-[20rem] hidden lg:block pt-[2.4rem]">
             <Extra />
           </div>
         </div>
