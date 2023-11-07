@@ -48,8 +48,8 @@ function Main() {
             {page === "Home" && <Home />}
             {page === "Marketplace" && <Marketplace />}
             {page === "Inventory" && <Inventory />}
-            {pageFilter === "Marketplace" && <Marketplace />}
-            {pageFilter === "Inventory" && <Inventory />}
+            {/* {pageFilter === "Marketplace" && <Marketplace />}
+            {pageFilter === "Inventory" && <Inventory />} */}
           </div>
 
           {/* Banners */}

@@ -60,7 +60,7 @@ const ItemList = () => {
 function Marketplace() {
   return (
     <>
-      <h1 className="text-cs-black tracking-widest font-bold text-sm px-4 py-2.5">MENU</h1>
+      <h1 className="text-cs-black tracking-widest font-bold text-sm px-4 py-2.5">MARKETPLACE</h1>
       <div className="h-full w-full py-3 bg-cs-white border border-cs-border-fade rounded">
         <TopicBar />
         <ItemList />
