@@ -49,7 +49,7 @@ function Item({ params }: any) {
 
           <div className="aspect-video rounded w-full mx-auto bg-gray-200">
             <img
-              src="https://i.imgur.com/2ZJXJ8k.png"
+              src="https://placehold.co/600x400"
               alt="item"
               width="100%"
               height="100%"

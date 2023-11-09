@@ -23,7 +23,7 @@ const ItemList = () => {
           <div key={i} className="flex gap-5 py-4 w-full border-b border-cs-border-fade">
             <div className="w-[25rem] bg-cs-fade3 aspect-video overflow-hidden">
               <img
-                src="https://i.imgur.com/2ZJXJ8k.png"
+                src="https://placehold.co/600x400"
                 alt="item"
                 width="100%"
                 height="100%"

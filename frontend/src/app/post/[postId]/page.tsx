@@ -4,20 +4,106 @@ import React, { useState } from "react";
 import Navbar from "@components/general/Navbar";
 import ChatPanel from "@components/general/ChatPanel";
 import NewPostPanel from "@components/general/NewPostPanel";
+import Banner from "@components/general/Banner";
 
-const BuyPanel = () => {
+const User = () => {
   return (
-    <div className="fixed bottom-0 z-10 bg-cs-white flex w-full  gap-2 px-4 py-2">
-      <div className="w-full max-w-3xl mx-auto flex">
-        <h1 className="flex flex-col pr-3">
-          <span className="font-bold text-cs-black text-sm">Price:</span>
-          <span className="font-bold text-cs-red text-base">RM200.66</span>
-        </h1>
-        <button className="w-full bg-cs-accent text-cs-white2 py-2 rounded hover:bg-cs-accent-hover transition font-medium">
-          Buy Now
+    <div className="flex gap-2 items-center">
+      <div className="text-xs text-cs-white bg-cs-accent rounded-[50%] w-6 leading-6 text-center">
+        A
+      </div>
+      <div className="text-sm flex gap-2 text-cs-fade2">
+        <p>Ammar Adnan</p>•<p>1h ago</p>
+      </div>
+    </div>
+  );
+};
+
+const PostDetails = () => {
+  return (
+    <div className="py-2">
+      <h1 className="text-cs-black font-bold text-lg">API Key in Github</h1>
+      <div className="flex flex-col gap-2 text-cs-fade2 text-sm mt-2">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptate, quibusdam,
+          officia, doloremque voluptatum quia deserunt molestiae rem quos dolorum voluptatibus eius.
+          Quisquam voluptate, quibusdam, officia, doloremque voluptatum quia deserunt molestiae rem
+          quos dolorum voluptatibus eius.
+        </p>
+      </div>
+    </div>
+  );
+};
+
+const PostActions = () => {
+  return (
+    <div className="flex gap-4">
+      <button aria-label="1" className="flex items-center gap-2 text-cs-fade2">
+        <i className="fa-solid fa-arrow-up text-cs-fade2" aria-hidden="true" />
+        <p>1</p>
+      </button>
+      <button aria-label="1" className="flex items-center gap-2 text-cs-fade2">
+        <i className="fa-solid fa-comment text-cs-fade2" aria-hidden="true" />
+        <p>1</p>
+      </button>
+      <button aria-label="options" className="flex items-center gap-2 text-cs-fade2">
+        <i className="fa-solid fa-ellipsis-h text-cs-fade2" aria-hidden="true" />
+      </button>
+    </div>
+  );
+};
+
+const ComunityInfo = {
+  title: "Comunity Info",
+  name: "comunity name",
+  description: "lorem ipsum at mein now rou yi helps geyouns kalknklknl",
+  extra: "10k followers",
+  button: {
+    text: "Follow Now",
+    style:
+      "border-cs-fade3 hover:bg-cs-fade1 transition hover:text-cs-white border bg-cs-white text-cs-black rounded",
+    callback: () => {
+      alert("Followed");
+    },
+  },
+};
+
+const CommentInput = () => {
+  return (
+    <div className="w-full my-4 border border-cs-border-fade bg-cs-white rounded-lg">
+      <div className="px-4 md:px-6 py-4">
+        <div className="space-y-1 pt-1">
+          <textarea
+            className="w-full h-full border-none text-sm outline-none text-cs-fade1"
+            placeholder="Write your comments"
+            rows={3}
+          ></textarea>
+        </div>
+      </div>
+      <span className="block w-full h-[0.5px] bg-cs-border-fade"></span>
+      <div className="flex justify-between items-center px-4 py-2">
+        <i
+          title="Upload file"
+          className="fa-solid fa-file text-cs-fade3 hover:text-cs-fade2 transition cursor-pointer"
+        ></i>
+        <button
+          type="button"
+          className="bg-cs-accent px-2 text-sm py-1 text-cs-white hover:bg-cs-accent-hover transition rounded"
+        >
+          Comment
         </button>
       </div>
     </div>
+  );
+};
+
+const Comment = () => {
+  return (
+    <>
+      <User />
+      <PostDetails />
+      <PostActions />
+    </>
   );
 };
 
@@ -27,7 +113,6 @@ function Post({ params }: any) {
       <Navbar />
       <ChatPanel />
       <NewPostPanel />
-      <BuyPanel />
 
       <div className="min-h-screen h-full w-full pb-20 px-4">
         {/* go back */}
@@ -41,141 +126,25 @@ function Post({ params }: any) {
           </a>
         </div>
         {/* content */}
-        <div className="w-full max-w-3xl mx-auto space-y-7 ">
-          {/* title */}
-          <h1 className="font-bold text-2xl text-center"></h1>
-
-          <div className="aspect-video rounded w-full mx-auto bg-gray-200">
-            <img
-              src="https://i.imgur.com/2ZJXJ8k.png"
-              alt="item"
-              width="100%"
-              height="100%"
-              className="w-full h-full object-cover object-center rounded"
-            />
-          </div>
-
-          <div className="flex flex-wrap gap-5 items-center justify-center">
-            <div className="flex gap-4 border-r-[1px] px-2">
-              <div className="w-10 h-10 rounded bg-cs-accent overflow-hidden"></div>
-              <div>
-                <p className="font-bold text-sm">Ammar Adnan</p>
-                <p className="text-sm">Software Developer</p>
-              </div>
-            </div>
-            <div className="flex gap-2 justify-center items-center px-2">
-              <p>4.8</p>
-              <i className="fa-solid fa-star text-yellow-300"></i>
-              <p>(24 reviews)</p>
-            </div>
-
-            <div className="flex gap-2 items-center px-2">
-              <i className="fa-solid fa-video text-cs-accent"></i>
-              <p>40 videos</p>
-            </div>
-
-            <div className="flex gap-2 items-center px-2">
-              <i className="fa-solid fa-user text-cs-accent"></i>
-              <p>345 student</p>
-            </div>
-          </div>
-
-          {/* learning content */}
-          <div className="border border-cs-border-fade px-5 py-4 bg-cs-white">
-            <h1 className="font-bold text-xl pb-4">What you will learn</h1>
-            <p>
-              The purpose of lorem ipsum is to create a natural looking block of text (sentence,
-              paragraph, page, etc.) that doesn't distract from the layout. A practice not without ,
-              laying out pages with meaningless filler text can be very useful when the focus is
-              meant to be on design, not content. The passage experienced a surge in popularity
-              during the 1960s when Letraset used it on their dry-transfer sheets, and again during
-              the 90s as desktop publishers bundled the text with their software. Today it's seen
-              all around the web; on templates, websites, and stock designs. Use our to get your
-              own, or read on for the authoritative history of lorem ipsum.
-            </p>
-          </div>
-
-          {/* course content */}
-          <div className="space-y-2">
-            <h1 className="font-bold text-xl">Course Content</h1>
-            <div className="flex gap-2">
-              <p>23 sections</p>•<p>156 lectures</p>•<p>22h 13m total length</p>
-            </div>
+        <div className="w-full relative h-full flex gap-3 justify-center">
+          <div className="w-full max-w-3xl bg-cs-white py-6 px-8 rounded border border-cs-border-fade">
             <div>
-              {[...Array(40)].map((_, i: number) => (
-                <div
-                  key={i}
-                  className="flex justify-between gap-2 px-5 py-3 border border-cs-border-fade bg-cs-white"
-                >
-                  <p>Video {i + 1}</p>
-                  <p className="text-cs-fade3">5m</p>
+              <User />
+              <PostDetails />
+              <PostActions />
+            </div>
+            <CommentInput />
+            <span className="block w-full h-[0.5px] bg-cs-border-fade my-6"></span>
+            <div className="flex flex-col gap-8">
+              {[...Array(5)].map((_, i: number) => (
+                <div key={i}>
+                  <Comment />
                 </div>
               ))}
             </div>
           </div>
-
-          {/* reviews */}
-          <div className="border border-cs-border-fade bg-cs-white px-5 py-4">
-            <h1 className="font-bold text-xl">Featured Reviews</h1>
-            {[...Array(3)].map((_, i: number) => (
-              <div key={i} className="px-2 py-3 border-b border-cs-border-fade  ">
-                <div className="flex gap-3">
-                  <div className="w-12 h-12 rounded bg-gray-200 overflow-hidden"></div>
-                  <div>
-                    <p className="font-bold">Ammar Adnan</p>
-                    <div className="flex items-center space-x-1">
-                      <svg
-                        className="w-4 h-4 text-yellow-300"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="currentColor"
-                        viewBox="0 0 22 20"
-                      >
-                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                      </svg>
-                      <svg
-                        className="w-4 h-4 text-yellow-300"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="currentColor"
-                        viewBox="0 0 22 20"
-                      >
-                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                      </svg>
-                      <svg
-                        className="w-4 h-4 text-yellow-300"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="currentColor"
-                        viewBox="0 0 22 20"
-                      >
-                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                      </svg>
-                      <svg
-                        className="w-4 h-4 text-yellow-300"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="currentColor"
-                        viewBox="0 0 22 20"
-                      >
-                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                      </svg>
-                      <svg
-                        className="w-4 h-4 text-gray-300 dark:text-gray-500"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="currentColor"
-                        viewBox="0 0 22 20"
-                      >
-                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-              </div>
-            ))}
+          <div className="overflow-y-auto pb-5 space-y-3 w-full md:max-w-[16rem] xl:max-w-[20rem] hidden lg:block ">
+            <Banner {...ComunityInfo} />
           </div>
         </div>
       </div>

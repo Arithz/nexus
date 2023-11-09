@@ -35,7 +35,7 @@ function Extra() {
 
   const ItemOfTheWeekInfo = {
     title: "Item of the Week",
-    image: "https://i.imgur.com/2ZJXJ8k.png",
+    image: "https://placehold.co/600x400",
     name: "Item Name",
     description: "Item Description",
     button: {

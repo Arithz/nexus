@@ -40,7 +40,7 @@ const ItemList = () => {
           >
             <div className="w-60 border border-cs-fade2 bg-cs-fade3 aspect-video overflow-hidden">
               <img
-                src="https://i.imgur.com/2ZJXJ8k.png"
+                src="https://placehold.co/600x400"
                 alt="item"
                 width="100%"
                 height="100%"

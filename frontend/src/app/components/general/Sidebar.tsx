@@ -24,6 +24,12 @@ function Sidebar({ page, handleSetPage }: SidebarProps) {
 
   const pages = ["Home", "Marketplace", "Inventory"];
 
+  const icons = {
+    Home: "home",
+    Marketplace: "shop",
+    Inventory: "briefcase",
+  };
+
   return (
     <>
       <h1 className="text-cs-black tracking-widest font-bold text-sm px-4 py-2.5">MENU</h1>
@@ -37,7 +43,7 @@ function Sidebar({ page, handleSetPage }: SidebarProps) {
               thispage === page && "bg-cs-black !text-cs-white"
             } flex items-center gap-4 py-1.5 px-4 text-sm font-medium text-cs-fade1 hover:text-cs-accent transition`}
           >
-            <i className="fa-solid fa-home"></i>
+            <i className={`fa-solid fa-${icons[thispage as keyof typeof icons]}`}></i>
             <p>{thispage}</p>
           </button>
         ))}

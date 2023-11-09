@@ -3,7 +3,7 @@ import { openChatWindow } from "@utils/utils";
 
 const LeftSide = () => {
   return (
-    <div className="max-w-[12rem] w-full  sm:hidden md:block mx-global !mr-0">
+    <div className="max-w-[12rem] w-full hidden md:block mx-global !mr-0">
       {/* logo */}
       <a href="/" className="flex items-center">
         <img src="/images/logo.svg" alt="Logo" className="w-12 h-12" />
@@ -14,7 +14,10 @@ const LeftSide = () => {
 
 const SearchBar = () => {
   return (
-    <div className="md:w-full max-w-4xl items-center md:order-1" id="navbar-sticky">
+    <div
+      className="hidden md:block md:w-full max-w-4xl items-center order-2 md:order-1"
+      id="navbar-sticky"
+    >
       <form>
         <label
           htmlFor="default-search"
@@ -47,7 +50,7 @@ const SearchBar = () => {
             placeholder="Search Mockups, Logos..."
             required
           />
-          <div className="flex items-center absolute right-2.5 bottom-[0.25rem] opacity-30">
+          {/* <div className="flex items-center absolute right-2.5 bottom-[0.25rem] opacity-30">
             <kbd className="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
               Ctrl
             </kbd>
@@ -55,7 +58,7 @@ const SearchBar = () => {
             <kbd className="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
               K
             </kbd>
-          </div>
+          </div> */}
         </div>
       </form>
     </div>
@@ -64,7 +67,7 @@ const SearchBar = () => {
 
 const RightSide = () => {
   return (
-    <div className="flex w-full md:max-w-[16rem] xl:max-w-[20rem] md:order-2 md:justify-end  mx-global !ml-0">
+    <div className="flex w-full md:max-w-[16rem] xl:max-w-[20rem] order-1 md:order-2 md:justify-end  mx-global !ml-0">
       <div className="w-full flex items-center gap-4 justify-end">
         {/* message */}
         <img
